@@ -3,31 +3,62 @@
 <head>
     <title>fetch test</title>
       <script>
-          if(navigator.serviceWorker){
-    navigator.serviceWorker.register('serviceworker.js', {
-      scope: '.'
-    }).then(function(registration) {
+    //       if(navigator.serviceWorker){
+    // navigator.serviceWorker.register('serviceworker.js', {
+    //   scope: '.'
+    // }).then(function(registration) {
 
-    console.log('The service worker has been registered ', registration);
+    // console.log('The service worker has been registered ', registration);
 
-    });
-          }
+    // });
+    //       }
+    //                                                                                                                                                                                 var a = true;
   </script>
 </head>
 <body>
 <h1>Image of a Dog</h1>
-<img id="myImage" />
+<img id="myImage" src="dog.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 var myImage = document.querySelector('img');
 
-fetch('dog.jpg').then(function(response) {
+fetch('kitten.jpg').then(function(response) {
   return response.blob();
 }).then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
+if ( a === true)  myImage.src = objectURL;
 });
 </script>
 
-</body>
-</html>
